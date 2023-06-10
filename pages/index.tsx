@@ -1,7 +1,29 @@
 import React from 'react'
 import Link from 'next/link';
+import {string} from "zod";
+import {GetStaticProps} from "next";
+// import axios from 'axios';
 
-export default function Home() {
+type Props = {
+	resString: string;
+};
+export const getStaticProps: GetStaticProps<Props> = async () => {
+	// const allPostsData = getSortedPostsData();
+	const res = await fetch(
+		'https://proud-union-5302.nan-hanaoka.workers.dev/api/todos'
+	)
+	const resString = await res.text()
+
+	return {
+		props: {
+			resString
+		}
+	}
+}
+
+export default function Home({ resString } : Props) {
+	console.log(resString)
+
   const [count, setCount] = React.useState(0);
   return (
     <>
