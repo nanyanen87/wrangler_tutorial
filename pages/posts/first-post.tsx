@@ -24,9 +24,11 @@ const FirstPost: FC = () => {
   return (
     <>
       <h1>First page</h1>
-      <h2>
-        <Link href={"/"}>Back to home</Link>
-      </h2>
+      <ul>
+        <li><Link href={"/posts/second-post"}>second</Link></li>
+        <li><Link href={"/posts/third-post"}>third</Link></li>
+        <li><Link href={"/posts/fourth-post"}>fourth</Link></li>
+      </ul>
       <table>
         <thead>
           <tr>

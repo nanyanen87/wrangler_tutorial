@@ -29,6 +29,8 @@
   },
   "devDependencies": {
     "@cloudflare/next-on-pages": "^1.0.1",
+    "@cloudflare/workers-types": "^4.20230518.0",
+    "@types/uuid": "^9.0.2",
     "vercel": "^30.0.0"
   }
 }

@@ -5,6 +5,8 @@ import {GetStaticProps} from "next";
 type Props = {
 	resString: string;
 };
+
+// 外部api呼び出しお試し
 export const getStaticProps: GetStaticProps<Props> = async () => {
 	// const allPostsData = getSortedPostsData();
 	const res = await fetch(
@@ -26,10 +28,9 @@ export default function Home({ resString } : Props) {
   return (
     <>
 			<section>
-				<h1>
-					{/*Learn <a href="https://nextjs.org/learn/foundations/about-nextjs?utm_source=next-site&utm_medium=nav-cta&utm_campaign=next-website">Next.js!</a>*/}
-					Read<Link href={'/posts/first-post'}>second page!</Link>
-				</h1>
+      <h2>
+        <Link href={"/posts/first-post"}>Back to home</Link>
+      </h2>
 				<p>Get started by editing <code>pages/index.js</code></p>
 			</section>
 		</>
