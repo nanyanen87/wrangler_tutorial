@@ -1,3 +1,4 @@
+// workers KVとの接続。dev環境ではどうやるか不明デプロイしたら環境変数をバインドしてるから動く
 import { KVNamespace } from "@cloudflare/workers-types";
 import type { NextRequest } from 'next/server'
 export const config = {
